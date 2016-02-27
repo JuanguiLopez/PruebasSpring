@@ -4,6 +4,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import beans.BeanSpring;
+import beans.CuadradoSpring;
 
 public class PruebaSpring {
 
@@ -13,6 +14,10 @@ public class PruebaSpring {
 		BeanFactory factory = context;
 		BeanSpring miBean = (BeanSpring) factory.getBean("miBean");
 		System.out.println("Mensaje: " + miBean.getMensaje());
+		
+		//PruebaSpring 27-02
+		CuadradoSpring miBeanCuadrado = (CuadradoSpring) factory.getBean("miBeanCuadrado");
+		System.out.println("El valor del número al cuadrado es: " + miBeanCuadrado.getNum());
 	}
 
 }
